@@ -6,9 +6,9 @@
 numbers = [15,-5,-12, 7, 10,-7,3,-10,4]
 
 #a
-def part_a():
+def part_a(nums = numbers):
     sum = 0
-    for num in numbers:
+    for num in nums:
         if abs(num) >= 10:
             sum += abs(num)
     
@@ -16,9 +16,9 @@ def part_a():
 
 #b
 
-def part_b():
+def part_b(nums = numbers):
     cubes = []
-    for num in numbers:
+    for num in nums:
         if num < 0:
             cube = num ** 3
             cubes.append(cube)
@@ -26,14 +26,14 @@ def part_b():
     print(cubes)
 
 #c
-def part_c():
-    tracker = set()
+def part_c(nums = numbers):
+    tracker = []
 
-    for num in numbers:
+    for num in nums:
         if abs(num) in tracker:
             print(abs(num))
             return None
-        tracker.add(abs(num))
+        tracker.append(abs(num))
     print('No reapeats')
 
 part_a()
