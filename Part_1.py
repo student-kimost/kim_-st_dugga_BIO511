@@ -31,9 +31,9 @@ def part_c():
 
     for num in numbers:
         if abs(num) in tracker:
-            print(num)
+            print(abs(num))
             return None
-        tracker.add(num)
+        tracker.add(abs(num))
     print('No reapeats')
 
 part_a()
